@@ -1,0 +1,20 @@
+{
+  "name": "ax-prod",
+  "interface": {
+    "displayName": "AX"
+  },
+  "plugins": [
+    {
+      "name": "ax",
+      "source": {
+        "source": "local",
+        "path": "./codex/ax"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

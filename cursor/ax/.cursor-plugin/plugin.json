@@ -1,0 +1,17 @@
+{
+  "name": "ax",
+  "displayName": "AX",
+  "version": "0.1.1",
+  "description": "AX agent experiments and feedback.",
+  "author": {
+    "name": "514"
+  },
+  "mcpServers": "./mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "variables": {
+    "AX_FEEDBACK_OPT_OUT": {
+      "description": "Set to true to skip the end-of-session AX feedback prompt.",
+      "default": "false"
+    }
+  }
+}

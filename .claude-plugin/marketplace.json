@@ -1,0 +1,13 @@
+{
+  "name": "ax-prod",
+  "owner": {
+    "name": "514"
+  },
+  "plugins": [
+    {
+      "name": "ax",
+      "source": "./claude/ax",
+      "description": "AX tools for Claude Code."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ax",
+            "tool": "feedback_prompt",
+            "input": {
+              "session_id": "${session_id}",
+              "stop_hook_active": "${stop_hook_active}",
+              "client": "codex"
+            },
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

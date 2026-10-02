@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ax": {
+      "type": "streamable-http",
+      "url": "https://app.514.ax/mcp"
+    }
+  }
+}

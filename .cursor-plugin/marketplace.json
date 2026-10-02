@@ -1,0 +1,19 @@
+{
+  "name": "ax-prod",
+  "displayName": "AX",
+  "owner": {
+    "name": "514"
+  },
+  "metadata": {
+    "description": "AX plugins",
+    "version": "0.1.1",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "ax",
+      "source": "./cursor/ax",
+      "description": "AX agent experiments and feedback."
+    }
+  ]
+}

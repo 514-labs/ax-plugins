@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:ax:ax",
+            "tool": "feedback_prompt",
+            "input": {
+              "session_id": "${session_id}",
+              "stop_hook_active": "${stop_hook_active}",
+              "client": "claude-code",
+              "feedback_opt_out": "${user_config.AX_FEEDBACK_OPT_OUT}"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

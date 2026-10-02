@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "hooks": {
+    "stop": [
+      {
+        "command": "AX_HOOK_EVENT=stop AX_FEEDBACK_OPT_OUT=\"${AX_FEEDBACK_OPT_OUT:-false}\" \"${CURSOR_PLUGIN_ROOT}/hooks/ax-feedback-hook.sh\"",
+        "timeout": 30,
+        "loop_limit": 1
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": "AX_HOOK_EVENT=afterMCPExecution AX_FEEDBACK_OPT_OUT=\"${AX_FEEDBACK_OPT_OUT:-false}\" \"${CURSOR_PLUGIN_ROOT}/hooks/ax-feedback-hook.sh\"",
+        "timeout": 30
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": "AX_HOOK_EVENT=afterShellExecution AX_FEEDBACK_OPT_OUT=\"${AX_FEEDBACK_OPT_OUT:-false}\" \"${CURSOR_PLUGIN_ROOT}/hooks/ax-feedback-hook.sh\"",
+        "timeout": 30
+      }
+    ]
+  }
+}

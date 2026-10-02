@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "AX_HOOK_EVENT=agentStop\nAX_STATE_DIR=\"${COPILOT_PLUGIN_DATA:-$HOME/.ax/state}\"\nAX_FEEDBACK_OPT_OUT=\"${AX_FEEDBACK_OPT_OUT:-false}\"\nexport AX_HOOK_EVENT AX_STATE_DIR AX_FEEDBACK_OPT_OUT\nplugin_root=\"\"\nfor candidate in \"$COPILOT_PLUGIN_ROOT\" \"$PLUGIN_ROOT\" \"$HOME/.copilot/installed-plugins/ax-prod/ax\"; do\n  if [ -n \"$candidate\" ] && [ -f \"$candidate/hooks/ax-feedback-hook.sh\" ]; then\n    plugin_root=\"$candidate\"\n    break\n  fi\ndone\nif [ -z \"$plugin_root\" ]; then\n  exit 0\nfi\n\"$plugin_root/hooks/ax-feedback-hook.sh\"",
+        "timeoutSec": 30
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "AX_HOOK_EVENT=postToolUse\nAX_STATE_DIR=\"${COPILOT_PLUGIN_DATA:-$HOME/.ax/state}\"\nAX_FEEDBACK_OPT_OUT=\"${AX_FEEDBACK_OPT_OUT:-false}\"\nexport AX_HOOK_EVENT AX_STATE_DIR AX_FEEDBACK_OPT_OUT\nplugin_root=\"\"\nfor candidate in \"$COPILOT_PLUGIN_ROOT\" \"$PLUGIN_ROOT\" \"$HOME/.copilot/installed-plugins/ax-prod/ax\"; do\n  if [ -n \"$candidate\" ] && [ -f \"$candidate/hooks/ax-feedback-hook.sh\" ]; then\n    plugin_root=\"$candidate\"\n    break\n  fi\ndone\nif [ -z \"$plugin_root\" ]; then\n  exit 0\nfi\n\"$plugin_root/hooks/ax-feedback-hook.sh\"",
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

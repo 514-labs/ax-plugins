@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ax",
+  "version": "0.1.1",
+  "description": "AX agent experiments: list experiments and share feedback with the AX team.",
+  "author": {
+    "name": "514"
+  }
+}
