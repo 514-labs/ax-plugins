@@ -37,6 +37,23 @@ copilot plugin install ax@ax-prod
 
 See [Copilot marketplace sources and refs](https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/copilot-cli-reference/cli-plugin-reference).
 
+### GitHub Copilot in VS Code
+
+Add this marketplace to your VS Code user settings, preserving existing entries:
+
+```json
+{
+  "chat.plugins.marketplaces": [
+    "514-labs/ax-plugins"
+  ]
+}
+```
+
+Open Extensions, search `@agentPlugins`, find `ax`, and select Install.
+Review the marketplace trust prompt.
+VS Code also discovers plugins installed with Copilot CLI in the same home directory.
+See [VS Code agent plugins](https://code.visualstudio.com/docs/agent-customization/agent-plugins).
+
 ### Cursor
 
 For an individual local install, clone the main channel and copy only its
@@ -49,8 +66,9 @@ cp -R ./ax-plugins-prod/cursor/ax/. ~/.cursor/plugins/local/ax/
 ```
 
 Restart Cursor or run **Developer: Reload Window**, then open Customize to
-confirm the plugin loaded. Local imports must be allowed by your team's policy;
-a marketplace install with the same plugin name takes precedence over a local copy.
+confirm the plugin loaded. On Teams and Enterprise plans, your admin must allow
+local imports. A marketplace install with the same plugin name takes precedence
+over a local copy.
 For updates, pull the clone with `git -C ax-plugins-prod pull --ff-only`,
 copy the Cursor shell again, and reload.
 See [Cursor's local-plugin instructions](https://cursor.com/docs/plugins#test-plugins-locally).
@@ -85,10 +103,10 @@ The stop hook may ask you to draft feedback after using AX. Feedback is sent
 only with your consent. Claude Code and Codex share a per-user 24-hour prompt
 cooldown; Copilot and Cursor use a separate local daily marker.
 
-- **Claude Code:** enable "Skip AX feedback prompt" in the plugin's settings. Its
+- **Claude Code:** Enable "Skip AX feedback prompt" in the plugin's settings. Its
   `AX_FEEDBACK_OPT_OUT` user setting is passed to the feedback tool; opting out
-  returns no prompt and does not claim or record an ask.
-- **Codex:** open `/hooks` and disable the AX Stop hook, or leave it untrusted.
+  skips the prompt and doesn't count toward the daily limit.
+- **Codex:** Open `/hooks` in the CLI and disable the AX Stop hook, or leave it untrusted.
   The MCP tool hook cannot read `AX_FEEDBACK_OPT_OUT` from your environment.
   To disable the entire plugin, add this to `~/.codex/config.toml` (or a
   trusted project's `.codex/config.toml`):
@@ -100,6 +118,6 @@ enabled = false
 
   See [Codex hook trust and disabling](https://learn.chatgpt.com/docs/hooks) and
   [plugin enable/disable configuration](https://developers.openai.com/plugins/build/plugins).
-- **Copilot:** set `AX_FEEDBACK_OPT_OUT=true` in the environment used to launch
-  Copilot CLI; the shell hook reads this value.
-- **Cursor:** configure the plugin's `AX_FEEDBACK_OPT_OUT` variable to `true`.
+- **Copilot:** Set `AX_FEEDBACK_OPT_OUT=true` in the environment used to launch
+  Copilot CLI or VS Code; the shell hook reads this value.
+- **Cursor:** Configure the plugin's `AX_FEEDBACK_OPT_OUT` variable to `true`.
