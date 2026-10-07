@@ -392,8 +392,10 @@ is_ax_tool_payload() {
     if [ -z "$server" ]; then
       return 1
     fi
-    [ "$(to_lower "$server")" = 'ax' ]
-    return $?
+    case "$(to_lower "$server")" in
+      ax|plugin-ax-ax) return 0 ;;
+      *) return 1 ;;
+    esac
   fi
 
   tool=''
