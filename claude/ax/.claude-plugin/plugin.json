@@ -1,6 +1,6 @@
 {
   "name": "ax",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "AX agent experiments: list experiments and share feedback with the AX team.",
   "userConfig": {
     "AX_FEEDBACK_OPT_OUT": {

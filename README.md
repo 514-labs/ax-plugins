@@ -99,9 +99,18 @@ replace their cached copy.
 
 ## Feedback and opt-out
 
-The stop hook may ask you to draft feedback after using AX. Feedback is sent
-only with your consent. Claude Code and Codex share a per-user 24-hour prompt
-cooldown; Copilot and Cursor use a separate local daily marker.
+After a session in which you use AX, the plugin asks your agent to draft feedback
+about AX, show it to you, and send it only after you say yes. The plugin cannot
+enforce this instruction: consent depends on the agent following it.
+
+Your coding client's permission prompt is the guarantee that you can review and
+approve the actual `feedback_send` arguments or `ax feedback send` command
+before it runs. "Always allow", auto-approve, and bypass modes remove that guarantee.
+
+The prompt is limited to once a day within each agent family. Claude Code and
+Codex share a per-user 24-hour cooldown. Copilot and Cursor share a separate local
+daily marker. These limits do not coordinate across the two families or across
+machines for the local marker.
 
 - **Claude Code:** Enable "Skip AX feedback prompt" in the plugin's settings. Its
   `AX_FEEDBACK_OPT_OUT` user setting is passed to the feedback tool; opting out
