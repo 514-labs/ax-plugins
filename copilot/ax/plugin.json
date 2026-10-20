@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ax",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "AX agent experiments and behaviors: list experiments, share feedback with the AX team and, where enabled for your org, create and version behaviors, label evidence as observations and query them.",
   "author": {
     "name": "514"
