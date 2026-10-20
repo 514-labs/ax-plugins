@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "AX plugins",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "pluginRoot": "."
   },
   "plugins": [
     {
       "name": "ax",
       "source": "./cursor/ax",
-      "description": "AX agent experiments and feedback."
+      "description": "AX agent experiments, behaviors and feedback."
     }
   ]
 }

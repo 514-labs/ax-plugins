@@ -1,8 +1,8 @@
 {
   "name": "ax",
   "displayName": "AX",
-  "version": "0.1.4",
-  "description": "AX agent experiments and feedback.",
+  "version": "0.1.5",
+  "description": "AX agent experiments, behaviors and feedback.",
   "author": {
     "name": "514"
   },

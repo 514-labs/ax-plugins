@@ -1,6 +1,8 @@
 # AX plugins
 
-Connect Claude Code, Codex, GitHub Copilot and Cursor to AX experiments.
+Connect Claude Code, Codex, GitHub Copilot and Cursor to AX experiments and behaviors.
+Where enabled for your org, agents can create and version behaviors, label
+evidence as observations and query labeled observations.
 This repository is generated from [514-labs/ax](https://github.com/514-labs/ax).
 Do not edit it here; changes will be overwritten by the release workflow.
 
