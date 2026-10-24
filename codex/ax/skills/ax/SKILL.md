@@ -20,6 +20,7 @@ while the list below is only an overview.
 
 ## Workflows
 
+- `author-experiment`: Create an experiment
 - `run-experiment`: Run an experiment
 - `analyze-results`: Analyze your results
 - `publish-insight`: Publish a shareable insight
