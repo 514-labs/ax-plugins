@@ -24,6 +24,7 @@ while the list below is only an overview.
 - `run-experiment`: Run an experiment
 - `analyze-results`: Analyze your results
 - `publish-insight`: Publish a shareable insight
+- `author-report`: Write a report
 - `analyze-sql`: Query results with SQL
 - `secrets`: Use secrets in an experiment
 - `invite-team`: Invite teammates to your org
