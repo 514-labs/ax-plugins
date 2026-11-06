@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "AX plugins",
-    "version": "0.1.9"
+    "version": "0.1.10"
   },
   "plugins": [
     {
       "name": "ax",
       "description": "AX agent experiments, behaviors and feedback",
-      "version": "0.1.9",
+      "version": "0.1.10",
       "source": "./copilot/ax"
     }
   ]
