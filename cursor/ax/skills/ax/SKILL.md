@@ -26,6 +26,7 @@ while the list below is only an overview.
 - `analyze-results`: Analyze your results
 - `publish-insight`: Publish a shareable insight (one saved query, not a report)
 - `author-report`: Write a report (a written document; for a single saved query use an insight)
+- `link-context`: Link Context objects to each other
 - `analyze-sql`: Query results with SQL
 - `secrets`: Use secrets in an experiment
 - `invite-team`: Invite teammates to your org
