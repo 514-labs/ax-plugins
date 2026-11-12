@@ -20,6 +20,7 @@ while the list below is only an overview.
 
 ## Workflows
 
+- `start-here`: Start here: experiments, reports and Context, one example each
 - `author-experiment`: Create an experiment
 - `run-experiment`: Run an experiment
 - `analyze-results`: Analyze your results
