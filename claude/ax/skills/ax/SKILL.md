@@ -30,4 +30,4 @@ while the list below is only an overview.
 - `analyze-sql`: Query results with SQL
 - `secrets`: Use secrets in an experiment
 - `invite-team`: Invite teammates to your org
-- `label-behaviors`: Label and review behaviors in run transcripts (only where behaviors are enabled for the organization)
+- `label-behaviors`: Label and review behaviors in run transcripts
